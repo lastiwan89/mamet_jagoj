@@ -1,7 +1,7 @@
 import { createFileRoute, useRouter } from '@tanstack/react-router'
 import { createServerFn } from '@tanstack/react-start'
-import { db } from '@/db'
 import { desc } from 'drizzle-orm'
+import { db } from '@/db'
 import { todos } from '@/db/schema'
 
 const getTodos = createServerFn({
@@ -71,8 +71,8 @@ function DemoDrizzle() {
           }}
         >
           <div className="relative group">
-            <div className="absolute -inset-2 bg-gradient-to-r from-indigo-500 via-purple-500 to-indigo-500 rounded-lg blur-lg opacity-60 group-hover:opacity-100 transition duration-500"></div>
-            <div className="relative bg-gradient-to-br from-indigo-600 to-purple-600 p-3 rounded-lg">
+            <div className="absolute -inset-2 bg-linear-to-r from-indigo-500 via-purple-500 to-indigo-500 rounded-lg blur-lg opacity-60 group-hover:opacity-100 transition duration-500"></div>
+            <div className="relative bg-linear-to-br from-indigo-600 to-purple-600 p-3 rounded-lg">
               <img
                 src="/drizzle.svg"
                 alt="Drizzle Logo"
@@ -80,7 +80,7 @@ function DemoDrizzle() {
               />
             </div>
           </div>
-          <h1 className="text-3xl font-bold bg-gradient-to-r from-indigo-300 via-purple-300 to-indigo-300 text-transparent bg-clip-text">
+          <h1 className="text-3xl font-bold bg-linear-to-r from-indigo-300 via-purple-300 to-indigo-300 text-transparent bg-clip-text">
             Drizzle Database Demo
           </h1>
         </div>
@@ -122,7 +122,6 @@ function DemoDrizzle() {
             style={{
               background: 'rgba(93, 103, 227, 0.1)',
               borderColor: 'rgba(93, 103, 227, 0.3)',
-              focusRing: 'rgba(93, 103, 227, 0.5)',
             }}
           />
           <button

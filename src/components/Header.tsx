@@ -24,7 +24,9 @@ export default function Header() {
           <h1 className="ml-4 text-xl font-semibold">
             <Link className="flex gap-2 items-center" to="/">
               <Home size={24} />
-              <span>JagoJalan Nusantara</span>
+              <span className="bg-linear-to-r from-cyan-400 via-cyan-600 to-fuchsia-700 bg-clip-text text-transparent font-bold">
+                JagoJalan Nusantara
+              </span>
             </Link>
           </h1>
         </div>
@@ -116,7 +118,6 @@ export default function Header() {
           >
             <span className="font-medium">Work</span>
           </Link>
-
           <Link
             to="/about"
             onClick={() => setIsOpen(false)}
@@ -127,6 +128,17 @@ export default function Header() {
             }}
           >
             <span className="font-medium">About</span>
+          </Link>
+          <Link
+            to="/contact"
+            onClick={() => setIsOpen(false)}
+            className="flex items-center gap-3 p-3 rounded-lg hover:bg-gray-800 transition-colors mb-2"
+            activeProps={{
+              className:
+                'flex items-center gap-3 p-3 rounded-lg bg-cyan-600 hover:bg-cyan-700 transition-colors mb-2',
+            }}
+          >
+            <span className="font-medium">Contact</span>
           </Link>
 
           <div className="flex flex-row justify-between">

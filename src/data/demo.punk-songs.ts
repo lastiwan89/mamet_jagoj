@@ -3,6 +3,7 @@ import { createServerFn } from '@tanstack/react-start'
 export const getPunkSongs = createServerFn({
   method: 'GET',
 }).handler(async () => [
+  { id: 0, name: 'Mama', artist: 'Eve Shena' },
   { id: 1, name: 'Teenage Dirtbag', artist: 'Wheatus' },
   { id: 2, name: 'Smells Like Teen Spirit', artist: 'Nirvana' },
   { id: 3, name: 'The Middle', artist: 'Jimmy Eat World' },
