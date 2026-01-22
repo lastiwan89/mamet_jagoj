@@ -14,8 +14,8 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as WorkIndexRouteImport } from './routes/work/index'
 import { Route as LocationIndexRouteImport } from './routes/location/index'
-import { Route as WorkIdRouteImport } from './routes/work/$id'
-import { Route as LocationIdRouteImport } from './routes/location/$id'
+import { Route as WorkWorkIdRouteImport } from './routes/work/$workId'
+import { Route as LocationLocationIdRouteImport } from './routes/location/$locationId'
 import { Route as DemoTanstackQueryRouteImport } from './routes/demo/tanstack-query'
 import { Route as DemoDrizzleRouteImport } from './routes/demo/drizzle'
 import { Route as DemoStartServerFuncsRouteImport } from './routes/demo/start.server-funcs'
@@ -52,14 +52,14 @@ const LocationIndexRoute = LocationIndexRouteImport.update({
   path: '/location/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const WorkIdRoute = WorkIdRouteImport.update({
-  id: '/work/$id',
-  path: '/work/$id',
+const WorkWorkIdRoute = WorkWorkIdRouteImport.update({
+  id: '/work/$workId',
+  path: '/work/$workId',
   getParentRoute: () => rootRouteImport,
 } as any)
-const LocationIdRoute = LocationIdRouteImport.update({
-  id: '/location/$id',
-  path: '/location/$id',
+const LocationLocationIdRoute = LocationLocationIdRouteImport.update({
+  id: '/location/$locationId',
+  path: '/location/$locationId',
   getParentRoute: () => rootRouteImport,
 } as any)
 const DemoTanstackQueryRoute = DemoTanstackQueryRouteImport.update({
@@ -119,8 +119,8 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/demo/drizzle': typeof DemoDrizzleRoute
   '/demo/tanstack-query': typeof DemoTanstackQueryRoute
-  '/location/$id': typeof LocationIdRoute
-  '/work/$id': typeof WorkIdRoute
+  '/location/$locationId': typeof LocationLocationIdRoute
+  '/work/$workId': typeof WorkWorkIdRoute
   '/location': typeof LocationIndexRoute
   '/work': typeof WorkIndexRoute
   '/demo/api/names': typeof DemoApiNamesRoute
@@ -138,8 +138,8 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/demo/drizzle': typeof DemoDrizzleRoute
   '/demo/tanstack-query': typeof DemoTanstackQueryRoute
-  '/location/$id': typeof LocationIdRoute
-  '/work/$id': typeof WorkIdRoute
+  '/location/$locationId': typeof LocationLocationIdRoute
+  '/work/$workId': typeof WorkWorkIdRoute
   '/location': typeof LocationIndexRoute
   '/work': typeof WorkIndexRoute
   '/demo/api/names': typeof DemoApiNamesRoute
@@ -158,8 +158,8 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/demo/drizzle': typeof DemoDrizzleRoute
   '/demo/tanstack-query': typeof DemoTanstackQueryRoute
-  '/location/$id': typeof LocationIdRoute
-  '/work/$id': typeof WorkIdRoute
+  '/location/$locationId': typeof LocationLocationIdRoute
+  '/work/$workId': typeof WorkWorkIdRoute
   '/location/': typeof LocationIndexRoute
   '/work/': typeof WorkIndexRoute
   '/demo/api/names': typeof DemoApiNamesRoute
@@ -179,8 +179,8 @@ export interface FileRouteTypes {
     | '/contact'
     | '/demo/drizzle'
     | '/demo/tanstack-query'
-    | '/location/$id'
-    | '/work/$id'
+    | '/location/$locationId'
+    | '/work/$workId'
     | '/location'
     | '/work'
     | '/demo/api/names'
@@ -198,8 +198,8 @@ export interface FileRouteTypes {
     | '/contact'
     | '/demo/drizzle'
     | '/demo/tanstack-query'
-    | '/location/$id'
-    | '/work/$id'
+    | '/location/$locationId'
+    | '/work/$workId'
     | '/location'
     | '/work'
     | '/demo/api/names'
@@ -217,8 +217,8 @@ export interface FileRouteTypes {
     | '/contact'
     | '/demo/drizzle'
     | '/demo/tanstack-query'
-    | '/location/$id'
-    | '/work/$id'
+    | '/location/$locationId'
+    | '/work/$workId'
     | '/location/'
     | '/work/'
     | '/demo/api/names'
@@ -237,8 +237,8 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   DemoDrizzleRoute: typeof DemoDrizzleRoute
   DemoTanstackQueryRoute: typeof DemoTanstackQueryRoute
-  LocationIdRoute: typeof LocationIdRoute
-  WorkIdRoute: typeof WorkIdRoute
+  LocationLocationIdRoute: typeof LocationLocationIdRoute
+  WorkWorkIdRoute: typeof WorkWorkIdRoute
   LocationIndexRoute: typeof LocationIndexRoute
   WorkIndexRoute: typeof WorkIndexRoute
   DemoApiNamesRoute: typeof DemoApiNamesRoute
@@ -288,18 +288,18 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LocationIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/work/$id': {
-      id: '/work/$id'
-      path: '/work/$id'
-      fullPath: '/work/$id'
-      preLoaderRoute: typeof WorkIdRouteImport
+    '/work/$workId': {
+      id: '/work/$workId'
+      path: '/work/$workId'
+      fullPath: '/work/$workId'
+      preLoaderRoute: typeof WorkWorkIdRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/location/$id': {
-      id: '/location/$id'
-      path: '/location/$id'
-      fullPath: '/location/$id'
-      preLoaderRoute: typeof LocationIdRouteImport
+    '/location/$locationId': {
+      id: '/location/$locationId'
+      path: '/location/$locationId'
+      fullPath: '/location/$locationId'
+      preLoaderRoute: typeof LocationLocationIdRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/demo/tanstack-query': {
@@ -381,8 +381,8 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   DemoDrizzleRoute: DemoDrizzleRoute,
   DemoTanstackQueryRoute: DemoTanstackQueryRoute,
-  LocationIdRoute: LocationIdRoute,
-  WorkIdRoute: WorkIdRoute,
+  LocationLocationIdRoute: LocationLocationIdRoute,
+  WorkWorkIdRoute: WorkWorkIdRoute,
   LocationIndexRoute: LocationIndexRoute,
   WorkIndexRoute: WorkIndexRoute,
   DemoApiNamesRoute: DemoApiNamesRoute,

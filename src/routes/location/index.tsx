@@ -1,9 +1,9 @@
 import { createFileRoute } from '@tanstack/react-router'
 
 export const Route = createFileRoute('/location/')({
-  component: RouteComponent,
+  component: LocationComponent,
 })
 
-function RouteComponent() {
+function LocationComponent() {
   return <div>Hello "/location/"!</div>
 }

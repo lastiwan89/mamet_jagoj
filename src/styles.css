@@ -135,4 +135,7 @@ code {
   body {
     @apply bg-background text-foreground;
   }
+  .hero {
+    @apply bg-[url('https://images.unsplash.com/photo-1706829518870-058e84aabf98?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGphcGFuJTIwbmF0dXJlfGVufDB8MHwwfHx8Mg%3D%3D')] bg-contain bg-no-repeat;
+  }
 }
